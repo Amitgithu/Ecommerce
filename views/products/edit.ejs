@@ -1,0 +1,87 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row">
+    <div class="col-md-6 mx-auto border border-dark rounded p-4">
+        <form action="/products/<%=product._id%>?_method=PATCH" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="name">Name : </label>
+                <input class="form-control" type="text" name="name" id="name" value="<%=product.name%>" placeholder="Product Name" required>
+
+                
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image URL</label>
+                <input class="form-control" type="text" name="image" id="img" value="<%=product.image%>" placeholder="Product Image URL" required>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Rs</span>
+                            <input type="number" name="price" class="form-control" value="<%=product.price%>" placeholder="Price" aria-label="Username" aria-describedby="basic-addon1" required>
+                            
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Selling Price</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Rs</span>
+                            <input type="number" name="selling_price" class="form-control" value="<%=product.selling_price%>" placeholder="Selling Price" aria-label="Username" aria-describedby="basic-addon1" required>
+                            
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Category</label>
+                        <select name="category" id="" value="<%=product.category%>" class="form-control" required>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                            <option value="Shoes">Shoes</option>
+                            <option value="Electronics">Electronics</option>
+                        </select>  
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Discount</label>
+                        <div class="input-group mb-3">
+                            <input type="text" name="discount" class="form-control" value="<%=product.discount%>" placeholder="50 % off" aria-label="Username" aria-describedby="basic-addon1" required>
+                            
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label" for="desc">Description</label>
+                <textarea class="form-control" name="desc" id="desc" value="<%=product.desc%>" rows="5" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <button type="submit" class="btn  btn-success">Update</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+

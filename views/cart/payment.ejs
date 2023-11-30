@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="/CSS/payment.css">
+</head>
+<body>
+    
+    <div class="wrapper mt-5">
+        <h4 class="text-uppercase text-center">Payment Details</h4>
+        <form class="form mt-4">
+            <div class="form-group">
+                <label for="name" class="text-uppercase">name on the card</label>
+                <input type="text" class="form-control mt-1" placeholder="Name">
+            </div>
+            <div class="form-group mt-2">
+                <label for="card" class="text-uppercase">card number</label>
+                <div class="card-number">
+                    <input type="text" class="card-no mt-1" step="4" placeholder="1234 4567 5869 1234" pattern="^[0-9].{15,}">
+                    <span class="">
+                        <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-marcus-samuelsson-group-2.png"
+                            alt="" width="30" height="30">
+                    </span>
+                </div>
+            </div>
+            <div class="d-flex w-100 mt-2">
+                <div class="d-flex w-50 pr-sm-4">
+                    <div class="form-group">
+                        <label for="expiry" class="text-uppercase">exp.date</label>
+                        <input type="text" class="form-control mt-1" placeholder="03/2020">
+                    </div>
+                </div>
+                <div class="d-flex w-50 pl-sm-5 pl-3">
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <a href="#"
+                            title="CVV is a credit or debit card number, the last three digit number printed on the signature panel">what's
+                            this</a>
+                        <input type="password" class="form-control pr-5 mt-1" maxlength="3" placeholder="123">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    <h6>My billing address is the same as the shipping</h6>
+                </label>
+            </div>
+
+            <!-- <div class="form-inline pt-sm-3 pt-2">
+                <input type="checkbox" name="address" id="address">
+                <label for="address" class="px-sm-1 pl-1 pt-sm-0 pt-2">My billing address is the same as the
+                    shipping</label>
+            </div> -->
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    <h6>Save my details for future purchases</h6>
+                </label>
+            </div>
+
+            <!-- <div class="form-inline py-sm-2">
+                <input type="checkbox" name="details" id="details">
+                <label for="details" class="px-sm-2 pl-2 pt-sm-0 pt-2">Save my details for future purchases</label>
+            </div> -->
+
+            <div class="d-grid my-3">
+                <button type="submit" class="btn btn-primary text-uppercase" >place your order</button>
+            </div>
+
+            <div id="form-footer">
+                <p>By placing your order, you agree to our</p>
+                <p><a href="#">privacy notice</a> & <a href="#">terms of use</a>.</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
