@@ -5,7 +5,7 @@ const { isLoggedIn } = require("../middleware");
 const Product = require("../models/product");
 
 const stripe = require("stripe")(
-  "sk_test_51NCgZhSGLp42UHm4pPgngGPHKynyCkkbe8oH7mFwVyGt6TozUodCPX6I3B1yLj9J6Czuah6wD88B2uQKGyo31EHH00kG40YstW"
+  "sk_test_51OI9XuSDvaj3CBe9tRkyOj2Ph18rS0LFuckcwSCsTJS5aoLDHz9kKpmuaBrddOl9k7AXew87ONYY0IaXyPHXXQV600m6FQ4XH6"
 );
 
 
@@ -59,8 +59,8 @@ router.post('/checkout/payment/:amount',async(req,res)=>{
       enabled: true,
     },
     mode: "payment",
-    success_url: "http://localhost:8080/user/cart",
-    cancel_url: "http://localhost:8080/user/cart",
+    success_url: "http://localhost:8080/products",
+    cancel_url: "http://localhost:8080/products",
   });
   res.redirect(303, session.url);
   // res.render("cart/payment");

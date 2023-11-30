@@ -11,10 +11,13 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const mongoSanitize = require('express-mongo-sanitize');
+const port = process.env.PORT || 8080;
+
+// sk_test_51NCgZhSGLp42UHm4pPgngGPHKynyCkkbe8oH7mFwVyGt6TozUodCPX6I3B1yLj9J6Czuah6wD88B2uQKGyo31EHH00kG40YstW  : Vishal
 
 
 const stripe = require("stripe")(
-  "sk_test_51NCgZhSGLp42UHm4pPgngGPHKynyCkkbe8oH7mFwVyGt6TozUodCPX6I3B1yLj9J6Czuah6wD88B2uQKGyo31EHH00kG40YstW"
+  "sk_test_51OI9XuSDvaj3CBe9tRkyOj2Ph18rS0LFuckcwSCsTJS5aoLDHz9kKpmuaBrddOl9k7AXew87ONYY0IaXyPHXXQV600m6FQ4XH6"
 );
 
 mongoose.connect(process.env.DB_URL)
